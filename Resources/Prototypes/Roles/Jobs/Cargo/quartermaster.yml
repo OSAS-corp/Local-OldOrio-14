@@ -52,8 +52,14 @@
     components:
       - type: CommandStaff
       - type: QuartermasterTraining
-  contracts: # Arcane
+  # Arcane-Start
+  contracts:
   - DocumentContractEmploymentCommand
+  alternateTitles:
+  - QuartermasterSupplyDirector
+  - QuartermasterSupplyForeman
+  - QuartermasterLogisticsCoordinator
+  # Arcane-End
 
 - type: startingGear
   id: QuartermasterGear
@@ -78,3 +84,17 @@
     outerClothing: ClothingOuterWinterQM
     neck: ClothingNeckCloakQm
     gloves: ClothingHandsKnuckleDustersQM
+
+# Arcane-Start
+- type: jobAlternateTitle
+  id: QuartermasterSupplyDirector
+  name: job-name-alt-qm-1
+
+- type: jobAlternateTitle
+  id: QuartermasterSupplyForeman
+  name: job-name-alt-qm-2
+
+- type: jobAlternateTitle
+  id: QuartermasterLogisticsCoordinator
+  name: job-name-alt-qm-3
+# Arcane-End

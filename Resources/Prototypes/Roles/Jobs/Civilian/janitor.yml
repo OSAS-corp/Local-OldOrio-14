@@ -25,6 +25,9 @@
   # Arcane-start
   contracts:
   - DocumentContractEmploymentService
+  alternateTitles:
+  - JanitorMaintenanceWorker
+  - JanitorCustodialTechnician
   # Arcane-end
 
 - type: startingGear
@@ -47,7 +50,6 @@
     belt: ClothingBeltJanitorFilled
     pocket1: KeyRingJanitor # Goobstation
 
-
 - type: chameleonOutfit
   id: JanitorChameleonOutfit
   job: Janitor
@@ -58,3 +60,13 @@
     neck: ClothingNeckScarfStripedPurple
     outerClothing: ClothingOuterWinterJani
     gloves: ClothingHandsGlovesJanitor
+
+# Arcane-Start
+- type: jobAlternateTitle
+  id: JanitorMaintenanceWorker
+  name: job-name-alt-janitor-1
+
+- type: jobAlternateTitle
+  id: JanitorCustodialTechnician
+  name: job-name-alt-janitor-2
+# Arcane-End

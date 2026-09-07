@@ -39,6 +39,9 @@
   # Arcane-start
   contracts:
   - DocumentContractEmploymentService
+  alternateTitles:
+  - ChefSousChef
+  - ChefLineCook
   # Arcane-end
 
 - type: startingGear
@@ -63,3 +66,13 @@
     outerClothing: ClothingOuterJacketChef
     gloves: ClothingHandsGlovesColorWhite
     shoes: ClothingShoesChef
+
+# Arcane-Start
+- type: jobAlternateTitle
+  id: ChefSousChef
+  name: job-name-alt-chef-1
+
+- type: jobAlternateTitle
+  id: ChefLineCook
+  name: job-name-alt-chef-2
+# Arcane-End

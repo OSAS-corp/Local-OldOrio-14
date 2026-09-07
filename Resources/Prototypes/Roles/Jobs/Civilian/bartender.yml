@@ -27,10 +27,12 @@
   extendedAccess:
   - Kitchen
   - Hydroponics
-  # Arcane-start
+  # Arcane-Start
   contracts:
   - DocumentContractEmploymentService
-  # Arcane-end
+  alternateTitles:
+  - BartenderBarista
+  # Arcane-End
 
 - type: startingGear
   id: BartenderGear
@@ -52,3 +54,9 @@
     neck: ClothingNeckScarfStripedBlack
     outerClothing: ClothingOuterArmorBasicSlim
     gloves: ClothingHandsGlovesColorBlack
+
+# Arcane-Start
+- type: jobAlternateTitle
+  id: BartenderBarista
+  name: job-name-alt-bartender-1
+# Arcane-End

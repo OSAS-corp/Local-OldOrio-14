@@ -40,6 +40,9 @@
   # Arcane-start
   contracts:
   - DocumentContractEmploymentSecurity
+  alternateTitles:
+  - DetectiveSecurityInvestigator
+  - DetectiveSecurityInspector
   # Arcane-end
 
 - type: startingGear
@@ -67,3 +70,13 @@
     mask: ClothingMaskGasSecurity
     neck: ClothingNeckTieDet
     gloves: ClothingHandsGlovesForensic
+
+# Arcane-Start
+- type: jobAlternateTitle
+  id: DetectiveSecurityInvestigator
+  name: job-name-alt-detective-1
+
+- type: jobAlternateTitle
+  id: DetectiveSecurityInspector
+  name: job-name-alt-detective-2
+# Arcane-End

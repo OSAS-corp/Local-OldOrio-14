@@ -38,6 +38,12 @@
   # Arcane-start
   contracts:
   - DocumentContractEmploymentMedical
+  alternateTitles:
+  - MedicalDoctorPhysician
+  - MedicalDoctorNurse
+  - MedicalDoctorSurgeon
+  - MedicalDoctorTherapist
+  - MedicalDoctorPathologist
   # Arcane-end
 
 - type: startingGear
@@ -59,3 +65,27 @@
     neck: ClothingNeckStethoscope
     outerClothing: ClothingOuterCoatLab
     gloves: ClothingHandsGlovesLatex
+
+# Arcane-Start
+- type: jobAlternateTitle
+  id: MedicalDoctorSurgeon
+  name: job-name-alt-medical-1
+
+- type: jobAlternateTitle
+  id: MedicalDoctorNurse
+  name: job-name-alt-medical-2
+  femaleName: job-name-alt-medical-2-f
+  maleName: job-name-alt-medical-2-m
+
+- type: jobAlternateTitle
+  id: MedicalDoctorPhysician
+  name: job-name-alt-medical-3
+
+- type: jobAlternateTitle
+  id: MedicalDoctorTherapist
+  name: job-name-alt-medical-4
+
+- type: jobAlternateTitle
+  id: MedicalDoctorPathologist
+  name: job-name-alt-medical-5
+# Arcane-End

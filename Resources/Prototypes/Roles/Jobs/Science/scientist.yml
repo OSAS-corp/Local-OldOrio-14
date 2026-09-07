@@ -24,6 +24,11 @@
   # Arcane-start
   contracts:
   - DocumentContractEmploymentRnd
+  alternateTitles:
+  - ScientistXenoarchaeologist
+  - ScientistAnomalyResearcher
+  - ScientistHardwareTechnician
+  - ScientistResearchScientist
   # Arcane-end
 
 - type: startingGear
@@ -44,3 +49,21 @@
     neck: ClothingNeckTieSci
     outerClothing: ClothingOuterCoatRnd
     gloves: ClothingHandsGlovesLatex
+
+# Arcane-Start
+- type: jobAlternateTitle
+  id: ScientistXenoarchaeologist
+  name: job-name-alt-scientist-1
+
+- type: jobAlternateTitle
+  id: ScientistAnomalyResearcher
+  name: job-name-alt-scientist-2
+
+- type: jobAlternateTitle
+  id: ScientistHardwareTechnician
+  name: job-name-alt-scientist-3
+
+- type: jobAlternateTitle
+  id: ScientistResearchScientist
+  name: job-name-alt-scientist-4
+# Arcane-End

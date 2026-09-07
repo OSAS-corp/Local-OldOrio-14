@@ -28,6 +28,11 @@
   # Arcane-start
   contracts:
   - DocumentContractEmploymentCargo
+  alternateTitles:
+  - CargoTechnicianCourier
+  - CargoTechnicianPilot
+  - CargoTechnicianClerk
+  - CargoTechnicianOrderingSpecialist
   # Arcane-end
 
 - type: startingGear
@@ -49,3 +54,21 @@
     outerClothing: ClothingOuterWinterCargo
     neck: ClothingNeckScarfStripedBrown
     gloves: ClothingHandsGlovesFingerless
+
+# Arcane-Start
+- type: jobAlternateTitle
+  id: CargoTechnicianCourier
+  name: job-name-alt-cargotech-1
+
+- type: jobAlternateTitle
+  id: CargoTechnicianPilot
+  name: job-name-alt-cargotech-2
+
+- type: jobAlternateTitle
+  id: CargoTechnicianClerk
+  name: job-name-alt-cargotech-3
+
+- type: jobAlternateTitle
+  id: CargoTechnicianOrderingSpecialist
+  name: job-name-alt-cargotech-4
+# Arcane-End

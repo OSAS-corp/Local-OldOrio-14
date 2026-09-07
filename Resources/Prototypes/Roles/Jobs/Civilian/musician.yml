@@ -23,6 +23,9 @@
   # Arcane-start
   contracts:
   - DocumentContractEmploymentService
+  alternateTitles:
+  - MusicianVisitingCelebrity
+  - MusicianPerformer
   # Arcane-end
 
 - type: startingGear
@@ -45,3 +48,13 @@
     neck: ClothingMultipleHeadphones
     outerClothing: ClothingOuterWinterMusician
     gloves: ClothingHandsGlovesColorBlack
+
+# Arcane-Start
+- type: jobAlternateTitle
+  id: MusicianVisitingCelebrity
+  name: job-name-alt-musician-1
+
+- type: jobAlternateTitle
+  id: MusicianPerformer
+  name: job-name-alt-musician-2
+# Arcane-End

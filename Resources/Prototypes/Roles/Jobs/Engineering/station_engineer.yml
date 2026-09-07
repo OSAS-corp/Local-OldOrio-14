@@ -31,6 +31,11 @@
   # Arcane-start
   contracts:
   - DocumentContractEmploymentEngineering
+  alternateTitles:
+  - StationEngineerMaintenanceSpecialist
+  - StationEngineerDesignEngineer
+  - StationEngineerElectricalEngineer
+  - StationEngineerConstructionEngineer
   # Arcane-end
 
 - type: startingGear
@@ -53,3 +58,21 @@
     outerClothing: ClothingOuterWinterEngi
     gloves: ClothingHandsGlovesColorYellow
     shoes: ClothingShoesBootsMag
+
+# Arcane-Start
+- type: jobAlternateTitle
+  id: StationEngineerMaintenanceSpecialist
+  name: job-name-alt-engineer-1
+
+- type: jobAlternateTitle
+  id: StationEngineerDesignEngineer
+  name: job-name-alt-engineer-2
+
+- type: jobAlternateTitle
+  id: StationEngineerElectricalEngineer
+  name: job-name-alt-engineer-3
+
+- type: jobAlternateTitle
+  id: StationEngineerConstructionEngineer
+  name: job-name-alt-engineer-4
+# Arcane-End

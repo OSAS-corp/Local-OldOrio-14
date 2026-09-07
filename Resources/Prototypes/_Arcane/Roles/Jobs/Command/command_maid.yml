@@ -39,6 +39,8 @@
         - CorporateCodespeak
   contracts:
   - DocumentContractEmploymentService
+  alternateTitles:
+  - CommandMaidButler
 
 - type: startingGear
   id: CommandMaidGear
@@ -56,3 +58,9 @@
     head: ClothingHeadHatCommandMaid
     neck: ClothingNeckTieBowCommandMaid
     gloves: ClothingHandsGlovesCommandMaid
+
+- type: jobAlternateTitle
+  id: CommandMaidButler
+  name: job-name-alt-commandmaid-1
+  maleName: job-name-alt-commandmaid-1-m
+  femaleName: job-name-alt-commandmaid-1-f
