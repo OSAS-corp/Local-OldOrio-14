@@ -152,6 +152,11 @@ public sealed class SupermatterSystem : SharedSupermatterSystem
 
     public void Cycle(EntityUid uid, SupermatterComponent sm)
     {
+        if (sm.TimeLocked < _gameTiming.CurTime.TotalMinutes - sm.TimeToUnlock && sm.Surge)
+        {
+            sm.Surge = false;
+            _chatmanager.SendAdminAlert($"SM variables unlocked at time {_gameTiming.CurTime.TotalMinutes}");
+        }
         sm.ZapAccumulator++;
         sm.YellAccumulator++;
 
@@ -173,6 +178,52 @@ public sealed class SupermatterSystem : SharedSupermatterSystem
         {
             sm.YellAccumulator -= sm.YellTimer;
             HandleAnnouncements(uid, sm);
+        }
+
+        if (sm.SMAngerValue < 0f)
+        {
+            sm.SMAngerValue = 0f;  //no negative numbers plz
+        }
+        else if (sm.SMAngerValue >= sm.SMEventSetpoint)  //if we are above the setpoint, do something
+        {
+            var eventToRunID = GetEventType(sm); //get what we do
+            sm.SMAngerValue = 0f;
+            if (eventToRunID == null)
+            {
+                return;
+            }
+            var eventToRun = _proto.Index<SupermatterEventPrototype>(eventToRunID);
+            if (eventToRun.Announcement != null)     //shout over radio!
+            {
+                var message = Loc.GetString(eventToRun.Announcement);
+                _radioSystem.SendRadioMessage(uid, message, _proto.Index<RadioChannelPrototype>(sm.RadioChannel), uid);
+                _chatmanager.SendAdminAlert($"{eventToRun.ID} run by supermatter {uid}");
+            }
+            if (eventToRun.GasToSpawn is not null)   //If its a gas event - create the gas
+            {
+                var mix = _atmosphere.GetContainingMixture(uid, true, true);
+                if (mix == null)
+                    return;
+                mix.AdjustMoles(eventToRun.GasToSpawn.Value, 2000f);
+            }
+            else if (eventToRun.ProtoToSpawn is not null)    //If its a spawn event - spawn what we want next to the SM
+            {
+                var xform = Transform(uid);
+                var coords = xform.Coordinates;
+                Vector2 xy = new Vector2(0f, -1f);
+                coords = coords.Offset(xy);
+                Spawn(eventToRun.ProtoToSpawn, coords);
+            }
+            else if (eventToRun.ID == "SMSurge")
+            {
+                sm.Surge = true;
+                _chatmanager.SendAdminAlert($"{sm.Surge} = supermatter surge begun at time: {_gameTiming.CurTime.TotalMinutes}");
+                sm.TimeLocked = _gameTiming.CurTime.TotalMinutes;
+                sm.GasEfficiencyFactorChanged = true;
+                sm.GasEfficiency = 0.30f;
+                sm.RadiationOutputFactorChanged = true;
+                sm.RadiationOutputFactor = 0.06f;
+            }
         }
     }
 
